@@ -1,25 +1,15 @@
-<!DOCTYPE html>
-<html>
+<?php
+    $db_host = 'radcliff.iad1-mysql-e2-1a.dreamhost.com';
+    $db_user = 'emilycm';
+    $db_password = 'mydb1212';
+    $db_db = 'banner_landing_page';
 
-<head>
-<title>Reporte CSV</title>
-</head>
-
-<body>
-    <?php
-
-    $db_host = 'localhost';
-    $db_user = 'root';
-    $db_password = 'root';
-    $db_db = 'landing_page';
-    $db_port = 8889;
 
     $mysqli = new mysqli(
         $db_host,
         $db_user,
         $db_password,
         $db_db,
-        $db_port
     );
 
     function decrypt($string, $key)
@@ -73,6 +63,15 @@
     $mysqli->close();
 
     ?>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Reporte CSV</title>
+</head>
+
+<body>
 </body>
 
 </html>

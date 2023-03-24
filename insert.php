@@ -8,18 +8,17 @@
 <body>
     <?php
 
-    $db_host = 'localhost';
-    $db_user = 'root';
-    $db_password = 'root';
-    $db_db = 'landing_page';
-    $db_port = 8889;
+    $db_host = 'radcliff.iad1-mysql-e2-1a.dreamhost.com';
+    $db_user = 'emilycm';
+    $db_password = 'mydb1212';
+    $db_db = 'banner_landing_page';
+  
 
     $mysqli = new mysqli(
         $db_host,
         $db_user,
         $db_password,
         $db_db,
-        $db_port
     );
     
     if (isset($_POST['submit'])) {
@@ -71,7 +70,6 @@
         
         $sql_get = "SELECT * FROM users WHERE users.id_number = '$id_number' OR users.email = '$email'";
         if ($result_get = mysqli_query($mysqli, $sql_get)) {
-
             if ($result_get->num_rows > 0) {
                 redirect_error();
             } else {
@@ -84,8 +82,14 @@
                     redirect_error();
                 }
             }
+        } else {
+            echo "ERROR: " . $mysqli->error;
         }
     }
+    if ($mysqli -> connect_errno) {
+        echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+        exit();
+      }
     $mysqli->close();
     ?>
 </body>
