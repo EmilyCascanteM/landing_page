@@ -1,18 +1,17 @@
 .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background: #3b3f47;
+  justify-content: center;
+  background: rgb(59, 63, 71);
   max-width: 100%;
   max-height: 100%;
-  color: #f0efee;
+  color: rgb(240, 239, 238);
 }
 
 .inputs-form {
-  display: -ms-grid;
   display: grid;
 }
+.inputs-form input {
+  height: 1.5rem;
+}
+
 /*# sourceMappingURL=index.css.map */

@@ -28,7 +28,7 @@
         Identificación: <input type="number" name="id_number" id="id_number" required /><br />
         Correo: <input type="email" name="email" required /><br />
         País:
-        <select style="height: 1.5rem;" name="country" required id="countries" name="countries">
+        <select style="height: 2rem; margin-bottom: 5%" name="country" required id="countries" name="countries">
           <?php
           $country_codes = json_decode(
             file_get_contents("http://country.io/names.json")
